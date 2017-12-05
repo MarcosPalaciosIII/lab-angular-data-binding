@@ -1,0 +1,20 @@
+<h2> Add a Food </h2>
+
+<div>
+  <label for="foodNameInput"> Name of food to add </label>
+  <input id="foodNameInput" type="text" placeholder="e.g. Pizza" [(ngModel)]=newFood.name />
+  <br />
+
+  <label for="foodCaloriesInput"> How many calories does your food have? </label>
+  <input id="foodCaloriesInput" type="number" placeholder="e.g. 150" [(ngModel)]=newFood.calories />
+  <br />
+
+  <label for="foodQuantityInput"> Quantity </label>
+  <input id="foodQuantityInput" type="number" placeholder="e.g. 0" [(ngModel)]=newFood.quantity />
+
+  <label for="foodImageInput"> Add an image of your food</label>
+  <input id="foodImageInput" type="text" placeholder="e.g. Pizza.com/image/png" [(ngModel)]=newFood.image />
+  <br />
+
+  <button (click)="addFood()"> Add Your Food </button>
+</div>

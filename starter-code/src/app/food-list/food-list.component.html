@@ -1,3 +1,39 @@
-<p>
-  food-list works!
-</p>
+<h2> Food List </h2>
+
+<div class="search-and-add-food">
+  <div>
+    <label for="serch-input"> Search For Your Favorite Food </label>
+    <input id="search-input" type="text" placeholder="e.g. 'pizza'" [(ngModel)]="foodSearch" />
+  </div>
+
+  <div>
+    <button (click)="toggleShow()"> Show/Hide Add Food Form </button>
+    <app-add-food [ngClass]="{'show-addFood': showConfig.showAddFood}"></app-add-food>
+  </div>
+</div>
+
+<hr />
+
+<div class="food-list">
+  <ul>
+    <li *ngFor="let oneFood of (listOfFoods | searchByName:foodSearch)">
+      <h3> {{ oneFood.name }} </h3>
+      <p> Calories: {{ oneFood.calories }} </p>
+      <p> Quantity: {{ oneFood.quantity }} </p>
+      <img [src]="oneFood.image" />
+      <hr />
+    </li>
+  </ul>
+</div>
+
+<!-- <div class="food-list">
+  <ul>
+    <li *ngFor="let oneFood of listOfFoods">
+      <h3> {{ oneFood.name }} </h3>
+      <p> Calories: {{ oneFood.calories }} </p>
+      <p> Quantity </p>
+      <img [src]="oneFood.image" />
+      <hr />
+    </li>
+  </ul>
+</div> -->

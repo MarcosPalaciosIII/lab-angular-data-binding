@@ -1,0 +1,21 @@
+.food-list ul {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+img {
+  width: 400px;
+  height: 300px;
+}
+
+.show-addFood {
+  visibility: hidden;
+}
+
+/*.search-and-add-food {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}*/

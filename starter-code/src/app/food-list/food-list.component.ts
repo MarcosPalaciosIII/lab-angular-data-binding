@@ -8,9 +8,26 @@ import foods from '../foods';
 })
 export class FoodListComponent implements OnInit {
 
+  listOfFoods: any[] = foods;
+
+  foodSearch: string = "";
+
+  showConfig: any = {
+    showAddFood: true
+  };
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  toggleShow() {
+    if (this.showConfig.showAddFood) {
+      this.showConfig.showAddFood = false;
+    }
+    else {
+      this.showConfig.showAddFood = true;
+    }
   }
 
 }
