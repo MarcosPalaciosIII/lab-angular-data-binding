@@ -19,7 +19,7 @@ export class AddFoodComponent implements OnInit {
   }
 
   addFood() {
-    this.listOfFood.push(this.newFood);
+    this.listOfFood.unshift(this.newFood);
 
     // for(let key in this.newFood){
     //   this.newFood[key] = "";
